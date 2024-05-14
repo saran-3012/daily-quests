@@ -201,7 +201,7 @@ const App = () => {
 
   // Configuration Handlers
 
-  const [activeNavlink, setActiveNavlink] = useState('');
+  const [activeNavlink, setActiveNavlink] = useState('All');
 
   const handleTaskConfigurationSettings = (activeElementName, configType) => {
     (configType==='Filter') && setActiveNavlink(activeElementName);
