@@ -18,7 +18,7 @@ const ShowPopupForm = () => {
     }
     const currentFormTaskDetails = {
       taskName:formTaskName,
-      taskEndDate:formTaskEndDate,
+      taskEndDate:StatesAndFunctions.changeDateFormat(formTaskEndDate),
       taskEndTime:formTaskEndTime,
       taskPriority: formTaskPriority ? "true" : "false"
     };
