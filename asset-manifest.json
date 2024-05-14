@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Daily-Quests/static/css/main.76c404bb.css",
-    "main.js": "/Daily-Quests/static/js/main.888b71ec.js",
+    "main.js": "/Daily-Quests/static/js/main.c7b856cf.js",
     "index.html": "/Daily-Quests/index.html",
     "main.76c404bb.css.map": "/Daily-Quests/static/css/main.76c404bb.css.map",
-    "main.888b71ec.js.map": "/Daily-Quests/static/js/main.888b71ec.js.map"
+    "main.c7b856cf.js.map": "/Daily-Quests/static/js/main.c7b856cf.js.map"
   },
   "entrypoints": [
     "static/css/main.76c404bb.css",
-    "static/js/main.888b71ec.js"
+    "static/js/main.c7b856cf.js"
   ]
 }
