@@ -20,7 +20,7 @@ const Sidebar = () => {
           </svg>
         </button>
         <div className="sidebar_inner_container">
-          <a className='app_logo' href='/' onClick={StatesAndFunctions.toggleSidebar}>
+          <a className='app_logo' href='#' onClick={StatesAndFunctions.toggleSidebar}>
             <img src={AppLogo} alt="App Logo"/>
           </a>
           <nav>

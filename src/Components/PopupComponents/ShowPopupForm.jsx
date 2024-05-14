@@ -6,7 +6,6 @@ import '../../Styles/ShowPopupBox.css';
 const ShowPopupForm = () => {
   const StatesAndFunctions = useAllContext();
   const popupSelectedTaskDetails = StatesAndFunctions.currentSelectedTaskDetails;
-  const [userName, setUserName] = useState(localStorage.getItem('userName')||'');
   const [formTaskName, setFormTaskName] = useState(popupSelectedTaskDetails ? popupSelectedTaskDetails.taskName : '');
   const [formTaskEndDate, setFormTaskEndDate] = useState(popupSelectedTaskDetails ? popupSelectedTaskDetails.taskEndDate : '');
   const [formTaskEndTime, setFormTaskEndTime] = useState(popupSelectedTaskDetails ? popupSelectedTaskDetails.taskEndTime : '');
@@ -38,7 +37,6 @@ const ShowPopupForm = () => {
       currentFormTaskDetails.taskCompletedStatus = "false";
       StatesAndFunctions.addTask(currentFormTaskDetails);
     }
-    localStorage.setItem('userName', userName);
     setFormTaskName('');
     setFormTaskEndDate('');
     setFormTaskEndTime('');
@@ -50,10 +48,6 @@ const ShowPopupForm = () => {
     <div className='popup_container_wrapper'>
       <h2 className='popup_container_header'>{popupSelectedTaskDetails.taskName?"Update Task":"Add Task"}</h2>
       <form className='popup_container_inner_wrapper'>
-      <div className='popup_inner_boxes' style={localStorage.getItem('userName')?{display:'none'}:{display:'flex'}}>
-          <label htmlFor="username_input">Your Name</label>
-          <input type="text" name="user_name" id="username_input" placeholder='Your name' onChange={(e) => setUserName(e.target.value)}/>
-      </div>
       <div className='popup_inner_boxes'>
           <label htmlFor="taskname_input">Task Name</label>
           <input type="text" name="task_name" id="taskname_input" placeholder='Task name' defaultValue={formTaskName} onChange={(e) => setFormTaskName(e.target.value)}/>

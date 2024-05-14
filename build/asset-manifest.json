@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Daily-Quests/static/css/main.76c404bb.css",
+    "main.js": "/Daily-Quests/static/js/main.3546eda5.js",
+    "index.html": "/Daily-Quests/index.html",
+    "main.76c404bb.css.map": "/Daily-Quests/static/css/main.76c404bb.css.map",
+    "main.3546eda5.js.map": "/Daily-Quests/static/js/main.3546eda5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76c404bb.css",
+    "static/js/main.3546eda5.js"
+  ]
+}

@@ -12,7 +12,7 @@ const Insights = () => {
   return (
     <div className='insights'>
       <div className="insights_container">
-        <h2>Hello <strong>{localStorage.getItem('userName')||'There'}</strong></h2>
+        <h2>Hello <strong onClick={() => StatesAndFunctions.changePopupMessageBox('change-username', {})}>{localStorage.getItem('userName')||'There'}</strong></h2>
       </div>
       <div className='insights_container'>
         <h3>Insights</h3>

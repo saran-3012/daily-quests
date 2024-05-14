@@ -1,5 +1,6 @@
 import React from 'react';
 import {useAllContext} from '../../App';
+import ShowPopupUsernameForm from './ShowPopupUsernameForm';
 import ShowPopupForm from './ShowPopupForm';
 import ShowPopupTaskDetails from './ShowPopupTaskDetails';
 import ShowPopupDeleteTask from './ShowPopupDeleteTask';
@@ -16,6 +17,8 @@ const ShowPopupInterface = () => {
             </svg>
           </button>
           {
+            (StatesAndFunctions.currentPopupMessage==="change-username")?
+            <ShowPopupUsernameForm/>:
             (StatesAndFunctions.currentPopupMessage==="add-task" || StatesAndFunctions.currentPopupMessage==="update-task")?
             <ShowPopupForm />:
             (StatesAndFunctions.currentPopupMessage==="show-task")?
