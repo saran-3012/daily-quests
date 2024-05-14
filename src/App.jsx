@@ -60,7 +60,7 @@ const App = () => {
   };
 
   const compareDateTime = (d1, d2, t1, t2) => {
-    return (d1<d2 || (d1===d2 && t1<t2));
+    return ((d1+t1) < (d2+t2));
   };
 
   // Popup Messages
@@ -97,16 +97,16 @@ const App = () => {
   }
   
   const filterTasks = (filterType, allTasks) => {
-    const currentDate = changeDateFormat(new Date().toJSON().slice(0, 10));
+    const currentDate = new Date().toJSON().slice(0, 10);
     const currentTime = correctTimeFormat(new Date().toJSON().slice(11,19));
     if(filterType==="In progress"){
-      return allTasks.filter((t) => t.taskCompletedStatus==="false" && (!t.taskEndDate || !t.taskEndTime || compareDateTime(currentDate, t.taskEndDate, currentTime, t.taskEndTime)));
+      return allTasks.filter((t) => t.taskCompletedStatus==="false" && (!t.taskEndDate || !t.taskEndTime || compareDateTime(currentDate, revertDateFormat(t.taskEndDate), currentTime, t.taskEndTime)));
     }
     else if(filterType==="Completed"){
       return allTasks.filter((t) => t.taskCompletedStatus==="true");
     }
     else if(filterType==="Overdue"){
-      return allTasks.filter((t) => t.taskCompletedStatus==="false" && t.taskEndDate && t.taskEndTime && !compareDateTime(currentDate, t.taskEndDate, currentTime, t.taskEndTime));
+      return allTasks.filter((t) => t.taskCompletedStatus==="false" && t.taskEndDate && t.taskEndTime && compareDateTime(revertDateFormat(t.taskEndDate), currentDate, t.taskEndTime, currentTime));
     }
     else{
       return allTasks;
