@@ -1,0 +1,117 @@
+.tasks{
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-dark);
+    background-color: var(--color-violet-light);
+}
+
+.tasks:hover{
+    color: var(--color-violet-200);
+    background-color: var(--color-violet-600);
+}
+
+.tasks:hover .alltask_button{
+    color: var(--color-violet-200);
+}
+
+.task_details_container{
+    max-width: 50%;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.alltask_button{
+    flex-shrink: 0;
+    cursor: pointer;
+    margin-top: 0.1rem;
+    color: var(--color-violet-dark);
+    border: none;
+    background-color: transparent;
+    width: 1rem;
+    height: 1rem;
+}
+
+.alltask_button:hover{
+    color: var(--color-violet-950) !important;
+}
+
+.alltask_name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.alltask_name.task_complete{
+    color: var(--color-slate-600);
+}
+
+.alltask_button.task_complete, .alltask_button.task_complete:hover{
+    color: rgb(0, 128, 255) !important;
+}
+
+.alltask_button.favorite_task_star, .alltask_button.favorite_task_star:hover{
+    color: gold !important;
+}
+
+@media only screen and (min-width: 475px){
+
+}
+
+@media only screen and (min-width: 640px){
+
+}
+
+@media only screen and (min-width: 768px){
+    .tasks{
+        padding: 1rem;
+    }
+    .alltask_button{
+        margin-top: 0;
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .alltask_name{
+        font-size: var(--size-lg);
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .tasks{
+        padding: 1.2rem;
+    }
+    .alltask_button{
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    .task_details_container{
+        gap: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+
+}
+
+@media only screen and (min-width: 1440px){
+    .tasks{
+        padding: 1.5rem;
+    }
+    .alltask_button{
+        margin-top: 0;
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    .alltask_name{
+        font-size: var(--size-xl);
+    }
+    .task_details_container{
+        gap: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1536px){
+
+}

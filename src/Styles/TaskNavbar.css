@@ -1,0 +1,40 @@
+.task_navbar{
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-light);
+}
+
+@media only screen and (min-width: 475px){
+
+}
+
+@media only screen and (min-width: 640px){
+
+}
+
+@media only screen and (min-width: 768px){
+
+}
+
+@media only screen and (min-width: 1024px){
+
+}
+
+@media only screen and (min-width: 1200px){
+
+}
+
+@media only screen and (min-width: 1440px){
+
+}
+
+@media only screen and (min-width: 1536px){
+
+}

@@ -1,0 +1,88 @@
+.single-chart {
+  width: 80%;
+  justify-content: space-around ;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.bg-circle {
+  fill: none;
+  stroke: var(--color-violet-light);
+  stroke-width: 3.8;
+}
+
+.progress-circle {
+  fill: none;
+  stroke: var(--color-violet-dark);
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+.single-chart:nth-of-type(2){
+  display: none;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.progress-text1 {
+  fill: var(--color-violet-600);
+  font-weight: 600;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+.progress-text2 {
+  fill: var(--color-violet-dark);
+  font-family: sans-serif;
+  font-size: 0.3em;
+  text-anchor: middle;
+  text-align: center;
+}
+
+
+
+@media only screen and (min-width: 475px){
+  .single-chart{
+    width: 40%;
+  }
+  .single-chart:nth-of-type(2){
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 640px){
+
+}
+
+@media only screen and (min-width: 768px){
+
+}
+
+@media only screen and (min-width: 1024px){
+  .single-chart{
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+
+}
+
+@media only screen and (min-width: 1440px){
+
+}
+
+@media only screen and (min-width: 1536px){
+
+}
