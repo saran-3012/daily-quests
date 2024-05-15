@@ -6,3 +6,8 @@
     width: 100%;
 }
 
+.notask_displayed_text{
+    color: var(--color-violet-dark);
+    margin-top: 0.5rem;
+    align-self: center;
+}
