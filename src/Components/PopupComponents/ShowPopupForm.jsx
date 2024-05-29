@@ -9,7 +9,7 @@ const ShowPopupForm = () => {
   const [formTaskName, setFormTaskName] = useState(popupSelectedTaskDetails ? popupSelectedTaskDetails.taskName : '');
   const [formTaskEndDate, setFormTaskEndDate] = useState(popupSelectedTaskDetails ? popupSelectedTaskDetails.taskEndDate : '');
   const [formTaskEndTime, setFormTaskEndTime] = useState(popupSelectedTaskDetails ? popupSelectedTaskDetails.taskEndTime : '');
-  const [formTaskPriority, setFormTaskPriority] = useState(popupSelectedTaskDetails ? popupSelectedTaskDetails.taskPriority : false);
+  const [formTaskPriority, setFormTaskPriority] = useState(popupSelectedTaskDetails ? popupSelectedTaskDetails.taskPriority : 'false');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ const ShowPopupForm = () => {
       taskName:formTaskName,
       taskEndDate:StatesAndFunctions.changeDateFormat(formTaskEndDate),
       taskEndTime:formTaskEndTime,
-      taskPriority: formTaskPriority ? "true" : "false"
+      taskPriority: formTaskPriority==='true' ? "true" : "false"
     };
 
     if (popupSelectedTaskDetails.taskName) {
@@ -40,7 +40,7 @@ const ShowPopupForm = () => {
     setFormTaskName('');
     setFormTaskEndDate('');
     setFormTaskEndTime('');
-    setFormTaskPriority(false);
+    setFormTaskPriority('false');
     StatesAndFunctions.changePopupMessageBox('', {});
   };
 
@@ -62,7 +62,7 @@ const ShowPopupForm = () => {
       </div>
       <div className='popup_checkbox'>
           <label htmlFor="taskfavourite_input">Mark as favorite</label>
-          <input type="checkbox" name="favorite_task" id="taskfavourite_input" defaultChecked={formTaskPriority} onChange={(e) => setFormTaskPriority(e.target.value)}/>
+          <input type="checkbox" name="favorite_task" id="taskfavourite_input" defaultChecked={formTaskPriority} onChange={(e) => setFormTaskPriority(e.target.checked+'')}/>
       </div>
       <button type="submit" id="popupform_submit_btn" className='popup_btn' onClick={handleSubmit}>{popupSelectedTaskDetails.taskName?"Update":"Save"}</button>
       </form>
