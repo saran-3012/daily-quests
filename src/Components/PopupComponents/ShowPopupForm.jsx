@@ -62,7 +62,7 @@ const ShowPopupForm = () => {
       </div>
       <div className='popup_checkbox'>
           <label htmlFor="taskfavourite_input">Mark as favorite</label>
-          <input type="checkbox" name="favorite_task" id="taskfavourite_input" defaultChecked={formTaskPriority} onChange={(e) => setFormTaskPriority(e.target.checked+'')}/>
+          <input type="checkbox" name="favorite_task" id="taskfavourite_input" defaultChecked={formTaskPriority==='true'} onChange={(e) => setFormTaskPriority(''+e.target.checked)}/>
       </div>
       <button type="submit" id="popupform_submit_btn" className='popup_btn' onClick={handleSubmit}>{popupSelectedTaskDetails.taskName?"Update":"Save"}</button>
       </form>
