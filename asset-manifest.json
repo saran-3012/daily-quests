@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/daily-quests/static/css/main.947b4dae.css",
-    "main.js": "/daily-quests/static/js/main.98d69950.js",
+    "main.js": "/daily-quests/static/js/main.a6187c39.js",
     "index.html": "/daily-quests/index.html",
     "main.947b4dae.css.map": "/daily-quests/static/css/main.947b4dae.css.map",
-    "main.98d69950.js.map": "/daily-quests/static/js/main.98d69950.js.map"
+    "main.a6187c39.js.map": "/daily-quests/static/js/main.a6187c39.js.map"
   },
   "entrypoints": [
     "static/css/main.947b4dae.css",
-    "static/js/main.98d69950.js"
+    "static/js/main.a6187c39.js"
   ]
 }
